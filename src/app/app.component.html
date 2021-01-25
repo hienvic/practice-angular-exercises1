@@ -1,0 +1,48 @@
+<div class = "appComponent mx-4">
+
+  <mat-toolbar>
+    <div class="collapsible-header" (click)="isShow=!isShow;buttonClick()" style="margin-top: 9px;">
+      <i class="material-icons" *ngIf="isShow">arrow_drop_down</i>
+      <i class="material-icons" *ngIf="!isShow">arrow_right</i>
+    </div>
+    <span>COSTING</span>
+  </mat-toolbar>
+  <hr *ngIf="!isShow">
+  <div *ngIf="isShow; else noShow">
+    
+    <br>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6">
+          chart 1
+        </div>
+
+        <div class="col-sm-6">
+          chart 1
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6">
+          chart 3
+        </div>
+
+        <div class="col-sm-6">
+          chart 4
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <ng-template #noShow>
+    <div>
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,82 @@
+{
+  "totalCost":[
+    {
+      "monthToDate": 2300.97,
+      "estimatedSpend": 2624.49,
+      "lastMonth": 285.42,
+      "changeFromLastMonth": 2339.08,
+      "currencyUnit": $
+    }
+  ],
+
+  "servicesBreakdown":[
+    {
+        "EC2":  2055.97,
+        "EFS":   250.6,
+        "OTHER": 234.32,
+        "S3":  100.69,
+        "SUPPORT":  120.3,
+	"currencyUnit": $,
+        "TOTAL":  2300.97
+    }
+  ],
+
+  "services": [
+    {
+        "id": 1,
+        "instanceType": "T2.MEDIUM",
+        "onDemandHours": 4853.35,
+        "reservedHous": 40,
+        "totalHours": 6955.44,
+        "coverage": 19.3
+    },
+    {
+        "id": 2,
+        "instanceType": "T2.NANO",
+        "onDemandHours": 5356.93,
+        "reservedHous": 43,
+        "totalHours": 4793.02,
+        "coverage": 7.1
+    },
+    {
+        "id": 3,
+        "instanceType": "T2.LARGE",
+        "onDemandHours": 5278.44,
+        "reservedHous": 3,
+        "totalHours": 9789.89,
+        "coverage": 63.5
+    },
+    {
+        "id": 4,
+        "instanceType": "M.LARGE",
+        "onDemandHours": 7599.94,
+        "reservedHous": 1,
+        "totalHours": 9242.38,
+        "coverage": 40.8
+    },
+    {
+        "id": 5,
+        "instanceType": "T2.MICRO",
+        "onDemandHours": 3340.35,
+        "reservedHous": 46,
+        "totalHours": 1162.96,
+        "coverage": 46.4
+    },
+    {
+        "id": 6,
+        "instanceType": "M3.MEDIUM",
+        "onDemandHours": 6466.9,
+        "reservedHous": 95,
+        "totalHours": 3317.11,
+        "coverage": 13.5
+    },
+    {
+        "id": 7,
+        "instanceType": "T2.SMALL",
+        "onDemandHours": 4490.96,
+        "reservedHous": 66,
+        "totalHours": 8628.27,
+        "coverage": 34.7
+    }
+  ]
+}
