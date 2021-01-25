@@ -1,7 +1,7 @@
 # Estimate timeline
-Day 1, 2: Vẽ Diagram, tạo mock server.
-Day 3, 4: Code Costing, Services, Reservation coverage component.
-Day 5, 6: Hoàn thiện và fix bug.
+- Day 1, 2: Vẽ Diagram, tạo mock server.
+- Day 3, 4: Code Costing, Services, Reservation coverage component.
+- Day 5, 6: Hoàn thiện và fix bug.
 
 # Exercises4
 
