@@ -1,3 +1,8 @@
+# Estimate timeline
+Day 1, 2: Vẽ Diagram, tạo mock server.
+Day 3, 4: Code Costing, Services, Reservation coverage component.
+Day 5, 6: Hoàn thiện và fix bug.
+
 # Exercises4
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
