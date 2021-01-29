@@ -1,10 +1,15 @@
 th {
-    text-align: right;
     text-transform: uppercase;
 }
-td, th {
+th {
     padding: 0.5rem;
 }
-td {
-    text-align: right;
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    }
+.table-wrapper-scroll-y {
+display: block;
 }

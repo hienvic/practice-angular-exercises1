@@ -1,15 +1,40 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
+import {  throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+import { TotalCost } from './total-cost';
+import { Services } from './services';
+import { Reservation } from './reservation';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private REST_API_SERVER = "http://localhost:3000";
-
-  constructor(private httpClient: HttpClient) { }
   
-  public sendGetRequest(){
-    return this.httpClient.get(this.REST_API_SERVER);
+  constructor(private httpClient: HttpClient) { }
+
+  public sendGetRequestTotalCost(url: string){
+    return this.httpClient.get<TotalCost[]>(url, {  params: new HttpParams(), observe: "response"});
+  }
+
+  public sendGetRequestServicesBreakdown(url: string){
+    return this.httpClient.get<Services[]>(url, {  params: new HttpParams(), observe: "response"});
+  }
+
+  public sendGetRequestReservation(url: string){
+    return this.httpClient.get<Reservation[]>(url, {  params: new HttpParams(), observe: "response"});
+  }
+
+  handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Unknown error!';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side errors
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side errors
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
   }
 }

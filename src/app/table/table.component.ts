@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { Reservation } from '../reservation';
 
 @Component({
   selector: 'app-table',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+  Reservation : Reservation[] = []
   constructor() { }
 
   ngOnInit(): void {
+    this.Reservation = AppComponent.Reservation;
   }
 
 }

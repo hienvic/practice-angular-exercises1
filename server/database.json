@@ -5,23 +5,23 @@
       "estimatedSpend": 2624.49,
       "lastMonth": 285.42,
       "changeFromLastMonth": 2339.08,
-      "currencyUnit": $
+      "currencyUnit": "$"
     }
   ],
 
   "servicesBreakdown":[
     {
         "EC2":  2055.97,
-        "EFS":   250.6,
-        "OTHER": 234.32,
+        "EFS":   0.00,
+        "OTHER": 10.69,
         "S3":  100.69,
-        "SUPPORT":  120.3,
-	"currencyUnit": $,
+        "SUPPORT":  0.00,
+	      "currencyUnit":"$",
         "TOTAL":  2300.97
     }
   ],
 
-  "services": [
+  "reservation": [
     {
         "id": 1,
         "instanceType": "T2.MEDIUM",
@@ -73,7 +73,7 @@
     {
         "id": 7,
         "instanceType": "T2.SMALL",
-        "onDemandHours": 4490.96,
+        "onDemandHours": 0,
         "reservedHous": 66,
         "totalHours": 8628.27,
         "coverage": 34.7

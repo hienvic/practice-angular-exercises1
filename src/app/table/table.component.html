@@ -1,49 +1,20 @@
-<table class="table table-borderless">
-    <thead>
-        <tr>
-          <th class="text-left">Instance type</th>
-          <th>On demand hours</th>
-          <th>Reserved hours</th>
-          <th>Total hours</th>
-          <th>Coverage</th>
-        </tr>
-    </thead>
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+<table class="table table-borderless"> 
     <tbody>
       <tr>
-        <td class="text-left">color</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-        <td>EC2</td>
-        <td>$200.59</td>
+        <th class="text-left">INSTANCE TYPE</th>
+        <th>On demand hours</th>
+        <th>Reserved hours</th>
+        <th>Total hours</th>
+        <th>Coverage</th>
       </tr>
-      <tr>
-        <td class="text-left">color</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-      </tr>
-      <tr>
-        <td class="text-left">color</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-      </tr>
-      <tr>
-        <td class="text-left">color</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-      </tr>
-      <tr>
-        <td class="text-left">colod</td>
-        <td>EC2</td>
-        <td>$200.59</td>
-        <td>EC2</td>
-        <td>$200.59</td>
+      <tr *ngFor="let reservation of Reservation">
+        <td class="text-left">{{ reservation.instanceType }}</td>
+        <td>{{ reservation.onDemandHours }}</td>
+        <td>{{ reservation.reservedHous }}</td>
+        <td>{{ reservation.totalHours }}</td>
+        <td>{{ reservation.coverage }}</td>
       </tr>
     </tbody>
   </table>
-  
+</div>

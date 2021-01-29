@@ -1,6 +1,6 @@
 <div class = "appComponent mx-4">
   <mat-toolbar>
-    <div class="collapsible-header" (click)="isShow=!isShow;buttonClick()" style="margin-top: 9px;">
+    <div class="collapsible-header" (click)="isShow=!isShow;" style="margin-top: 9px;">
       <i class="material-icons" *ngIf="isShow">arrow_drop_down</i>
       <i class="material-icons" *ngIf="!isShow">arrow_right</i>
     </div>
@@ -12,9 +12,9 @@
     <br>
     <div class="container">
       <app-costing></app-costing>
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-sm-6">
-          <p style="color: #4a9ad4; margin-bottom: 0px;">SERVICES BREAKDOWN</p>
+          <p style="color: #4a9ad4;">SERVICES BREAKDOWN</p>
           <app-service></app-service>
         </div>
 
@@ -33,7 +33,7 @@
           <p style="color: #4a9ad4; margin-bottom: 0px;">RESERVATION COVERAGE</p>
           <app-table></app-table>
         </div>
-        <div class="col-sm-5 mt-3">
+        <div class="col-sm-5 mt-5">
           <app-bar-chart></app-bar-chart>
         </div>
       </div>

@@ -15,6 +15,7 @@ import { ChartsModule } from 'ng2-charts';
 import { TableComponent } from './table/table.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     PieChartComponent,
     TableComponent,
     BarChartComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
+import { AppComponent } from '../app.component';
+import { Reservation } from '../reservation';
 
 @Component({
   selector: 'app-bar-chart',
@@ -8,9 +10,12 @@ import { Label, Color } from 'ng2-charts';
   styleUrls: ['./bar-chart.component.css']
 })
 export class BarChartComponent implements OnInit {
+  Reservation : Reservation[] = []
+
   public chartColors: Color[] = [{
     backgroundColor: '#c34431'
   }];
+
   barChartOptions: ChartOptions = {
     responsive: true,
     legend: { display: false } 
@@ -27,6 +32,15 @@ export class BarChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.Reservation = AppComponent.Reservation;
+    var dataChart = [];
+    var labelChart = [];
+    for (let i = 0; i < this.Reservation.length; i++) {
+      dataChart.push(this.Reservation[i].onDemandHours);
+      labelChart.push(this.Reservation[i].instanceType);
+    }
+    this.barChartLabels = labelChart;
+    this.barChartData[0].data = dataChart;
   }
 
 }

@@ -1,18 +1,18 @@
 <div class="row">
     <div class="col-sm-3">
-      <p class="font-weight-bold">$2030.59</p>
       <p class="costing-text">MONTH TO DATE</p>
+      <p class="font-weight-bold">{{ TotalCost[0].currencyUnit }} {{ TotalCost[0].monthToDate }}</p>
     </div>
     <div class="col-sm-3">
-      <p class="font-weight-bold">$2030.59</p>
       <p class="costing-text">ESTIMATED SPEND</p>
+      <p class="font-weight-bold">{{ TotalCost[0].currencyUnit }} {{ TotalCost[0].estimatedSpend }}</p>
     </div>
     <div class="col-sm-3">
-      <p class="font-weight-bold">$2030.59</p>
       <p class="costing-text">LAST MONTH</p>
+      <p class="font-weight-bold">{{ TotalCost[0].currencyUnit }} {{ TotalCost[0].lastMonth }}</p>
     </div>
     <div class="col-sm-3">
-      <p class="font-weight-bold" style="color:brown">$2030.59</p>
       <p class="costing-text">CHANGE FROM LAST MONTH</p>
+      <p class="font-weight-bold" style="color:brown">{{ TotalCost[0].currencyUnit }} {{ TotalCost[0].changeFromLastMonth }}</p>
     </div>
 </div>

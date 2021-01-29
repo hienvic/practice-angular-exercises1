@@ -2,16 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label, Color } from 'ng2-charts';
 import { ChartOptions } from 'chart.js';
+import { AppComponent } from '../app.component';
+import { Services } from '../services';
 
 @Component({
   selector: 'app-pie-chart',
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.css']
 })
-export class PieChartComponent  {
-  doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla', 'Vin', 'Vins'];
+export class PieChartComponent implements OnInit {
+
+  Services : Services[] = [];
+
+  doughnutChartLabels: Label[] = ['EC2', 'EFS', 'OTHER', 'S3', 'SUPPORT'];
   doughnutChartData: MultiDataSet = [
-    [55, 15, 20, 5, 5]
+    [1, 5, 6, 8, 10]
   ];
   doughnutChartType: ChartType = 'doughnut';
   public chartColors: Color[] = [{
@@ -21,9 +26,19 @@ export class PieChartComponent  {
     responsive: true,
     legend: {display: false}  
   }
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
+    this.Services = AppComponent.Services;
+    let dataChart = [
+      [
+        this.Services[0].EC2, 
+        this.Services[0].EFS, 
+        this.Services[0].OTHER, 
+        this.Services[0].S3, 
+        this.Services[0].SUPPORT
+      ]
+    ];
+    this.doughnutChartData = dataChart;
   }
 }
