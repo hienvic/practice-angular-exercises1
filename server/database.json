@@ -25,58 +25,58 @@
     {
         "id": 1,
         "instanceType": "T2.MEDIUM",
-        "onDemandHours": 4853.35,
-        "reservedHous": 40,
-        "totalHours": 6955.44,
-        "coverage": 19.3
+        "onDemandHours": 1021.22,
+        "reservedHous": 0.0,
+        "totalHours": 1021.22,
+        "coverage": "0.0%"
     },
     {
         "id": 2,
         "instanceType": "T2.NANO",
-        "onDemandHours": 5356.93,
-        "reservedHous": 43,
-        "totalHours": 4793.02,
-        "coverage": 7.1
+        "onDemandHours": 2184.93,
+        "reservedHous":  0.0,
+        "totalHours": 2184.93,
+        "coverage": "0.0%"
     },
     {
         "id": 3,
         "instanceType": "T2.LARGE",
-        "onDemandHours": 5278.44,
-        "reservedHous": 3,
-        "totalHours": 9789.89,
-        "coverage": 63.5
+        "onDemandHours": 1283.9,
+        "reservedHous":  0.0,
+        "totalHours": 1283.9,
+        "coverage": "0.0%"
     },
     {
         "id": 4,
         "instanceType": "M.LARGE",
-        "onDemandHours": 7599.94,
-        "reservedHous": 1,
-        "totalHours": 9242.38,
-        "coverage": 40.8
+        "onDemandHours": 5.4,
+        "reservedHous":  0.0,
+        "totalHours": 5.4,
+        "coverage": "0.0%"
     },
     {
         "id": 5,
         "instanceType": "T2.MICRO",
-        "onDemandHours": 3340.35,
-        "reservedHous": 46,
-        "totalHours": 1162.96,
-        "coverage": 46.4
+        "onDemandHours": 5818.26,
+        "reservedHous":  0.0,
+        "totalHours": 5818.26,
+        "coverage": "0.0%"
     },
     {
         "id": 6,
         "instanceType": "M3.MEDIUM",
-        "onDemandHours": 6466.9,
-        "reservedHous": 95,
-        "totalHours": 3317.11,
-        "coverage": 13.5
+        "onDemandHours": 2.22,
+        "reservedHous":  0.0,
+        "totalHours": 2.22,
+        "coverage": "0.0%"
     },
     {
         "id": 7,
         "instanceType": "T2.SMALL",
-        "onDemandHours": 0,
-        "reservedHous": 66,
-        "totalHours": 8628.27,
-        "coverage": 34.7
+        "onDemandHours": 2754.13,
+        "reservedHous":  0.0,
+        "totalHours": 2754.13,
+        "coverage": "0.0%"
     }
   ]
 }
