@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
-import { AppComponent } from '../app.component';
-import { Reservation } from '../reservation';
+import { HomeComponent } from '../home/home.component';
+import { Reservation } from '../../interface/reservation';
 
 @Component({
   selector: 'app-bar-chart',
@@ -32,7 +32,7 @@ export class BarChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.Reservation = AppComponent.Reservation;
+    this.Reservation = HomeComponent.Reservation;
     var dataChart = [];
     var labelChart = [];
     for (let i = 0; i < this.Reservation.length; i++) {

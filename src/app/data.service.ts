@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
-import {  throwError } from 'rxjs';
+import { throwError} from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { TotalCost } from './total-cost';
-import { Services } from './services';
-import { Reservation } from './reservation';
+import { TotalCost } from './interface/total-cost';
+import { Services } from './interface/services';
+import { Reservation } from './interface/reservation';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { Reservation } from '../reservation';
+import { AppComponent } from '../../app.component';
+import { Reservation } from '../../interface/reservation';
 
 @Component({
   selector: 'app-table',

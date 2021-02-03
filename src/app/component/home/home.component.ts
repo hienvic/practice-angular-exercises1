@@ -1,18 +1,18 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DataService } from './data.service';
+import { DataService } from '../../data.service';
 import {  takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
-import { TotalCost } from './interface/total-cost';
-import { Services } from './interface/services';
-import { Reservation } from './interface/reservation';
+import { TotalCost } from '../../interface/total-cost';
+import { Services } from '../../interface/services';
+import { Reservation } from '../../interface/reservation';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
 
   title = 'AngularChart';
   isShow = false;
@@ -46,21 +46,21 @@ export class AppComponent implements OnInit, OnDestroy {
   getTotalCost(){
     this.dataService.sendGetRequestTotalCost(this.REST_TOTAL_COST)
     .pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>)=>{
-      AppComponent.TotalCost = res.body;
+      HomeComponent.TotalCost = res.body;
     })
   }
 
   getServices(){
     this.dataService.sendGetRequestServicesBreakdown(this.REST_SERVICES_BREAKDOWN)
     .pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>)=>{
-      AppComponent.Services = res.body;
+      HomeComponent.Services = res.body;
     })
   }
 
   getReservation(){
     this.dataService.sendGetRequestReservation(this.REST_RESERVATION)
     .pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>)=>{
-      AppComponent.Reservation = res.body;
+      HomeComponent.Reservation = res.body;
     })
   }
 }

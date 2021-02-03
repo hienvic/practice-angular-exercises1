@@ -1,0 +1,47 @@
+<div class = "appComponent mx-4">
+    <mat-toolbar>
+      <div class="collapsible-header" (click)="isShow=!isShow;" style="margin-top: 9px;">
+        <i class="material-icons" *ngIf="isShow">arrow_drop_down</i>
+        <i class="material-icons" *ngIf="!isShow">arrow_right</i>
+      </div>
+      <span>COSTING</span>
+    </mat-toolbar>
+    <hr *ngIf="!isShow">
+    <div *ngIf="isShow; else noShow">
+      
+      <br>
+      <div class="container">
+        <app-costing></app-costing>
+        <div class="row mt-5">
+          <div class="col-sm-6">
+            <p style="color: #4a9ad4;">SERVICES BREAKDOWN</p>
+            <app-service></app-service>
+          </div>
+  
+          <div class="col-sm-6">
+            <app-pie-chart> </app-pie-chart>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <br>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7">
+            <p style="color: #4a9ad4; margin-bottom: 0px;">RESERVATION COVERAGE</p>
+            <app-table></app-table>
+          </div>
+          <div class="col-sm-5 mt-5">
+            <app-bar-chart></app-bar-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noShow>
+      <div>
+      </div>
+    </ng-template>
+  </div>
+  

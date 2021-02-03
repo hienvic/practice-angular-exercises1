@@ -4,18 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { CostingComponent } from './costing/costing.component';
-import { ServiceComponent } from './service/service.component';
-import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CostingComponent } from './component/costing/costing.component';
+import { ServiceComponent } from './component/service/service.component';
+import { PieChartComponent } from './component/pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
-import { TableComponent } from './table/table.component';
-import { BarChartComponent } from './bar-chart/bar-chart.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { TableComponent } from './component/table/table.component';
+import { BarChartComponent } from './component/bar-chart/bar-chart.component';
+import { AccountComponent } from './account/account.component';
+import { LoginComponent } from './component/login/login.component';
+
+import { HomeComponent } from './component/home/home.component';
+import { RouterModule } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
@@ -25,8 +30,9 @@ import { LoginComponent } from './login/login.component';
     PieChartComponent,
     TableComponent,
     BarChartComponent,
-    HomeComponent,
-    LoginComponent
+    AccountComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,12 @@ import { LoginComponent } from './login/login.component';
     MatIconModule,
     HttpClientModule,
     NgbModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot([
+      { path: 'login', component: LoginComponent },
+      { path: 'dash-board', component: HomeComponent },
+      {path: '', redirectTo: '/login', pathMatch: 'full'},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

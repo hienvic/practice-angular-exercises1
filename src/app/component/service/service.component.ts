@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { Services } from '../services';
+import { HomeComponent } from '../home/home.component';
+import { Services } from '../../interface/services';
 
 @Component({
   selector: 'app-service',
@@ -14,7 +14,7 @@ export class ServiceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.Services = AppComponent.Services;
+    this.Services = HomeComponent.Services;
     console.log(this.Services);
   }
 

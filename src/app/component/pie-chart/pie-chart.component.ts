@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label, Color } from 'ng2-charts';
 import { ChartOptions } from 'chart.js';
-import { AppComponent } from '../app.component';
-import { Services } from '../services';
+import { HomeComponent } from '../home/home.component';
+import { Services } from '../../interface/services';
 
 @Component({
   selector: 'app-pie-chart',
@@ -29,7 +29,7 @@ export class PieChartComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.Services = AppComponent.Services;
+    this.Services = HomeComponent.Services;
     let dataChart = [
       [
         this.Services[0].EC2, 

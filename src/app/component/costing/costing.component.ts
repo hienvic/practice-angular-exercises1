@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TotalCost } from '../total-cost';
-import { AppComponent } from '../app.component';
+import { TotalCost } from '../../interface/total-cost';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-costing',
@@ -14,7 +14,7 @@ export class CostingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.TotalCost = AppComponent.TotalCost;
+    this.TotalCost = HomeComponent.TotalCost;
     console.log(this.TotalCost);
   }
 
