@@ -14,13 +14,10 @@ import { PieChartComponent } from './component/pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { TableComponent } from './component/table/table.component';
 import { BarChartComponent } from './component/bar-chart/bar-chart.component';
-import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './component/login/login.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home.component';
 import { RouterModule } from '@angular/router';
-
-
 
 @NgModule({
   declarations: [
@@ -30,7 +27,6 @@ import { RouterModule } from '@angular/router';
     PieChartComponent,
     TableComponent,
     BarChartComponent,
-    AccountComponent,
     LoginComponent,
     HomeComponent
   ],
@@ -42,6 +38,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     NgbModule,
     ChartsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'dash-board', component: HomeComponent },
